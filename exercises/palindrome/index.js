@@ -24,17 +24,33 @@
 
 // SOLUTION 2
 
+// function palindrome(str) {
+//     for(let i = 0; i < str.length; i++) {
+//         // console.log(str[i] + ' !== ' + str[str.length-1-i]);
+//         if(str[i] !== str[str.length-1-i]){
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+
+// SOLUTION 3
+//
+// function palindrome(str) {
+//    let reversed = str.split('').reverse().join('');
+//    console.log('res',reversed);
+//    return reversed === str;
+// }
+
+// SOLUTION 4
+
 function palindrome(str) {
-    let reversed = '';
-    for(let i = 0; i < str.length; i++) {
-        // console.log(str[i] + ' !== ' + str[str.length-1-i]);
-        if(str[i] !== str[str.length-1-i]){
-            return false;
-        }
-    }
-    return true;
+    return str.split('').every((char, i) =>{
+        return char === str[str.length-i-1];
+    })
+
 }
 
-console.log(palindrome('nicu'));
+console.log(palindrome('alla'));
 
 module.exports = palindrome;
