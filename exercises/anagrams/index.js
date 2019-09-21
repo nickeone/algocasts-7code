@@ -17,10 +17,8 @@
 function anagrams(stringA, stringB) {
     let strA = stringA;
     let strB = stringB;
-    strA = strA.toLowerCase();
-    strB = strB.toLowerCase();
-    strA = strA.replace(/[&\/\\#,+()$~%.'":*?<>{} !]/g,'');
-    strB = strB.replace(/[&\/\\#,+()$~%.'":*?<>{} !]/g,'');
+    strA = strA.replace(/[^\w]/g,'').toLowerCase();
+    strB = strB.replace(/[^\w]/g,'').toLowerCase();
 
     for (let i = 0; i < strA.length; i++){
         let bool = false;
@@ -29,7 +27,8 @@ function anagrams(stringA, stringB) {
                 bool = true;
             }
         }
-        if(bool === false){
+        if(bool === false || strA.length !== strB.length){
+            console.log('strA', strA, 'strB',strB);
             console.log('false');
             return false;
         }
@@ -41,5 +40,10 @@ function anagrams(stringA, stringB) {
 
 module.exports = anagrams;
 
-anagrams('Hi there', 'Bye there') ;
+anagrams('hello', 'llohe');
+anagrams('Whoa! Hi!', 'Hi! Whoa!');
+anagrams('One One', 'Two two two');
+anagrams('One one', 'One one c');
+anagrams('A tree, a life, a bench', 'A tree, a fence, a yard');
+
 
