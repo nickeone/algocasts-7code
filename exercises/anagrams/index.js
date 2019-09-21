@@ -9,11 +9,6 @@
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
 
-
-// transform to small letters
-// remove spaces and punctuations
-// compare every el of string a with string and if is an element
-
 function anagrams(stringA, stringB) {
     let strA = stringA;
     let strB = stringB;
