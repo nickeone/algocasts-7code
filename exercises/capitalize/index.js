@@ -7,16 +7,31 @@
 //   capitalize('a lazy fox') --> 'A Lazy Fox'
 //   capitalize('look, it is working!') --> 'Look, It Is Working!'
 
+// function capitalize(str) {
+//     let strToArr = str.split("");
+//     strToArr[0] = strToArr[0].toUpperCase();
+//     for(let i = 1; i < strToArr.length; i++){
+//         if(strToArr[i-1] === " "){
+//             console.log("white space");
+//             strToArr[i] = strToArr[i].toUpperCase()
+//         }
+//     }
+//     return strToArr.join("");
+// }
+
 function capitalize(str) {
-    let strToArr = str.split("");
-    strToArr[0] = strToArr[0].toUpperCase();
-    for(let i = 1; i < strToArr.length; i++){
-        if(strToArr[i-1] === " "){
-            console.log("white space");
-            strToArr[i] = strToArr[i].toUpperCase()
+    let cpStr = "";
+    cpStr += str[0].toUpperCase();
+
+    for(let i = 1; i < str.length; i++){
+        if(str[i-1] === " "){
+            // console.log("white space");
+            cpStr += str[i].toUpperCase();
+        }else{
+            cpStr += str[i];
         }
     }
-    return strToArr.join("");
+    return cpStr;
 }
 
 capitalize('nicu is fine');
