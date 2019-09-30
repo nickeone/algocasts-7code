@@ -15,6 +15,7 @@
 // compare every el of string a with string and if is an element
 
 function anagrams(stringA, stringB) {
+
     let strA = stringA;
     let strB = stringB;
     strA = strA.replace(/[^\w]/g,'').toLowerCase();
