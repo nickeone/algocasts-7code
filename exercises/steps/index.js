@@ -17,6 +17,42 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+// function steps(n) {
+//     let str = "";
+//     let bool = false;
+//
+//     for (let i = 1; i <= n; i++){
+//         if(i <= n){
+//             str += "#";
+//             // console.log(str);
+//         }
+//
+//
+//         if(n >= i){
+//             // console.log('nicu');
+//             str += "0";
+//         }
+//
+//
+//         console.log(str);
+//     }
+// }
+//
+// steps(4);
 
+function steps(n) {
+    for (let i = 0; i < n; i++){
+        let str = "";
+        for (let j = 0; j < n; j++){
+            if(j <= i ){
+                str += "#";
+            }else{
+                str += " "
+            }
+        }
+        console.log(str);
+    }
+}
+
+steps(4);
 module.exports = steps;
