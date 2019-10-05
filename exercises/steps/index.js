@@ -17,42 +17,39 @@
 //       '### '
 //       '####'
 
+function steps(n, row = 0, str = '') {
+        if(row === n){
+            return;
+        }
+        if(str.length === n){
+            console.log(str);
+            return steps(n, row + 1, str = '');
+        }
+        // console.log('str',str.length);
+        if(str.length <= row){
+            str += "#";
+        }else{
+            str += " ";
+        }
+        steps(n, row, str);
+}
+
+
+steps(4);
+
 // function steps(n) {
-//     let str = "";
-//     let bool = false;
-//
-//     for (let i = 1; i <= n; i++){
-//         if(i <= n){
-//             str += "#";
-//             // console.log(str);
+//     for (let i = 0; i < n; i++){
+//         let str = "";
+//         for (let j = 0; j < n; j++){
+//             if(j <= i ){
+//                 str += "#";
+//             }else{
+//                 str += " "
+//             }
 //         }
-//
-//
-//         if(n >= i){
-//             // console.log('nicu');
-//             str += "0";
-//         }
-//
-//
 //         console.log(str);
 //     }
 // }
 //
 // steps(4);
-
-function steps(n) {
-    for (let i = 0; i < n; i++){
-        let str = "";
-        for (let j = 0; j < n; j++){
-            if(j <= i ){
-                str += "#";
-            }else{
-                str += " "
-            }
-        }
-        console.log(str);
-    }
-}
-
-steps(4);
 module.exports = steps;
