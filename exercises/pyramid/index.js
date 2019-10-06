@@ -31,25 +31,42 @@
 
 // col = 11 ; 0 1 2 3 4 # 6 7 8 9 10
 
+//
+// function pyramid(n) {
+//     const mid = n - 1;
+//     for(let row = 0; row < n; row++){
+//         let str = "";
+//         // console.log('row');
+//         for(let col = 0; col < n * 2 - 1; col++){
+//             // console.log('col');
+//             if(mid - row <= col && mid + row >= col){
+//                 // console.log('1if');
+//                 str += "#";
+//             }else{
+//                 str += " ";
+//             }
+//         }
+//         console.log(str);
+//     }
+// }
 
-function pyramid(n) {
-    const mid = n - 1;
-    for(let row = 0; row < n; row++){
-        let str = "";
-        // console.log('row');
-        for(let col = 0; col < n * 2 - 1; col++){
-            // console.log('col');
-            if(mid - row <= col && mid + row >= col){
-                // console.log('1if');
-                str += "#";
-            }else{
-                str += " ";
-            }
-        }
-        console.log(str);
+function pyramid(n, row = 0,  str = '') {
+    let mid = n - 1;
+    if(row === n){
+        return;
     }
+    if(str.length === n * 2 - 1){
+        console.log(str);
+        return pyramid(n, row + 1, str = '')
+    }
+    if(mid - row <= str.length && mid + row >= str.length){
+        str += "#";
+    }else{
+        str += " ";
+    }
+    pyramid(n, row, str);
 }
 
-pyramid(3);
+pyramid(5);
 
 module.exports = pyramid;
