@@ -9,7 +9,6 @@
 
 function vowels(str) {
     let lower = str.toLowerCase();
-    console.log(lower);
     let strVowels = '';
     let vowels = "aeiou";
     for(let i = 0; i < lower.length; i++){

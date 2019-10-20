@@ -66,13 +66,13 @@ function matrix(n) {
             res[i][startCol] = counter;
             counter ++;
         }
-        startCol++;
+        // startCol++;
         console.log('startcol', startCol);
 
     }
     console.log('counter', counter);
 
-    // return res;
+    return res;
 
     res.map(line => {
         console.log(line);
