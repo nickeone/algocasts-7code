@@ -19,20 +19,20 @@
 //
 // fib(4);
 
-//
-// function fib( n, i = 0, arr = [0,1] ) {
-//     if( i === n-1){
-//         return arr[arr.length-1];
-//     }
-//     arr.push(arr[i] + arr[i+1]);
-//     fib(n, i + 1, arr);
-//
-//     // console.log("i", i);
-//     console.log('nicu', arr[n]);
-//     // console.log("i", i);
-//     // console.log('arr', arr);
-//     // console.log(arr[i] + arr[i+1]);
-// }
+
+function fib( n, i = 0, arr = [0,1] ) {
+    if( i === n-1){
+        return arr[arr.length-1];
+    }
+    arr.push(arr[i] + arr[i+1]);
+    fib(n, i + 1, arr);
+
+    // console.log("i", i);
+    console.log('nicu', arr[n]);
+    // console.log("i", i);
+    // console.log('arr', arr);
+    // console.log(arr[i] + arr[i+1]);
+}
 
 // function fib(num){
 //     var a = 1, b = 0, temp;
@@ -46,14 +46,14 @@
 // }
 // fib(39);
 
-function fib(n){
-    if(n < 2){
-        return n;
-    }
-    console.log(fib(n-1) + fib( n + 1));
-    return fib(n-1) + fib( n-2);
-}
-
-fib(3);
+// function fib (n){
+//     if(n < 2){
+//         return n;
+//     }
+//     console.log(fib(n-1) + fib(n - 2));
+//     return fib(n-1) + fib( n-2);
+// }
+//
+fib(39);
 
 module.exports = fib;
