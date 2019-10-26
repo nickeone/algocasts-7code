@@ -25,9 +25,6 @@
 // q.remove() // 'There'
 
 const Queue = require('./queue');
-
-
-
 function weave(sourceOne, sourceTwo) {
     const q = new Queue();
 
