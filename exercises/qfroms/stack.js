@@ -4,6 +4,7 @@ class Stack {
   }
 
   push(record) {
+    console.log('push');
     this.data.push(record);
   }
 
